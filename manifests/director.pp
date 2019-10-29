@@ -52,7 +52,7 @@ class bareos::director(
 
   file { $config_director_dirs:
     ensure  => directory,
-    purge   => true,
+    purge   => false,
     recurse => true,
     force   => true,
     mode    => $::bareos::file_dir_mode,
