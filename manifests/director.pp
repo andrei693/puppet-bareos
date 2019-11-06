@@ -53,7 +53,7 @@ class bareos::director(
   file { $config_director_dirs:
     ensure  => directory,
     purge   => false,
-    recurse => true,
+    recurse => false,
     force   => true,
     mode    => $::bareos::file_dir_mode,
     owner   => $::bareos::file_owner,
