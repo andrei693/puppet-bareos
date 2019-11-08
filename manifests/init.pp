@@ -31,6 +31,7 @@ class bareos (
   $client_service_name   = $::bareos::params::client_service_name,
   $storage_package_name  = $::bareos::params::storage_package_name,
   $storage_service_name  = $::bareos::params::storage_service_name,
+  $webui_service_name    = $::bareos::params::webui_service_name,
 ) inherits ::bareos::params {
 
   if $manage_repo {
