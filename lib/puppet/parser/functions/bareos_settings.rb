@@ -48,7 +48,7 @@ module Puppet::Parser::Functions
             Integer(value)
           when 'name', 'res', 'resource'
             quote = true
-            regex = %r{^[a-z][a-z0-9\.\-_ \$]{0,126}$}i
+            regex = %r{^[a-z0-9][a-z0-9\.\-_ \$]{0,126}$}i
           when 'acl', 'messages', 'type', 'string_noquote', 'schedule_run_command'
             raise 'Value need to be an string' unless value.is_a?(String)
           # type md5password is missleading, it is an plain password and not md5 hashed
